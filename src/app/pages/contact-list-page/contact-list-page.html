@@ -1,0 +1,15 @@
+<!-- contact-list-page.html -->
+<div class="page">
+    <div class="header">
+    <h1>Contactos</h1>
+    <a class="primary-link" routerLink="/contacts/new">Nuevo contacto +</a>
+    </div>
+
+    <div class="list">
+    @for (contacto of contactsService.contacts; track $index) {
+        <app-contact-list-item [contacto]="contacto" [index]="$index" />
+    } @empty {
+        <p class="empty">No hay contactos, <a routerLink="/contacts/new">agregá uno</a>.</p>
+    }
+    </div>
+</div>

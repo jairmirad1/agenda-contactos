@@ -1,0 +1,86 @@
+/* General page layout and styling */
+.page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333;
+  overflow: hidden; /* Esto es clave: oculta el contenido que se desborda */
+  display: flex; /* Hacemos el contenedor flexible */
+  flex-direction: column; /* Organiza los elementos en columna */
+}
+
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin: 0;
+}
+
+.primary-link {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.primary-link:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.primary-link:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
+
+/* Contact list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto; /* Permite el scroll vertical si el contenido es demasiado largo */
+  padding-right: 15px; /* Agrega un espacio para que el scrollbar no se pegue a los items */
+}
+
+/* Styling for when the list is empty */
+.empty {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #888;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  line-height: 1.5;
+}
+
+.empty a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.empty a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
