@@ -2,6 +2,7 @@ import { Component, inject, input } from '@angular/core';
 import { Contact } from '../../interfaces/contacto';
 import { ContactsService } from '../../services/contacts-service';
 import { RouterModule } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-list-item',
@@ -15,5 +16,24 @@ export class ContactListItem {
 
   contactsService = inject(ContactsService)
 
-
+  showDeleteContact() {
+    Swal.fire({
+      title: "¿Estas seguro?",
+      text: "Eliminar un contacto no se puede revertir",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Borrar",
+      cancelButtonText: "Cancelar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.contactsService.deleteContact(this.contacto().id)
+        Swal.fire({
+          title: "Usuario Borrado",
+          icon: "success"
+        });
+      }
+    });
+  }
 }
