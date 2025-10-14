@@ -1,46 +1,77 @@
-/* Styling for the individual contact list item */
 .contact-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background-color: #ffffff;
+  padding: 15px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-bottom: 12px;
+  transition: 0.3s;
 }
 
 .contact-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-dorado);
+  box-shadow: 0 2px 8px var(--color-dorado);
+  transform: translateY(-0.3px);
 }
 
-/* Contact information section */
 .contact-details {
   display: flex;
   align-items: center;
-  flex-grow: 1;
-  font-size: 1rem;
-  color: #555;
-  font-weight: 500;
+  gap: 30px;
 }
 
-.contact-details .index {
-  font-weight: bold;
-  color: #007bff;
-  margin-right: 0.5rem;
-  font-size: 1.1em;
+.contact-details .numcont {
+  font-size: 14px;
+  color: #888;
 }
 
 .contact-details .name {
-  color: #333;
+  font-size: 18px;
   font-weight: 600;
-  margin-right: 0.5rem;
+  color: var(--color-background);
 }
 
 .contact-details .favorite-icon {
-  color: gold;
-  font-size: 1.25rem;
-  margin-left: 0.5rem;
+  font-size: 18px;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-actions a, 
+.contact-actions button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid ;
+  cursor: pointer;
+  transition:350ms ;
+}
+
+.contact-actions a {
+  color: var(--color-dorado);
+  background-color: #fff;
+  border-color: var(--color-dorado);
+}
+
+.contact-actions a:hover {
+  background-color: var(--color-dorado);
+  color: #fff;
+}
+
+.contact-actions button {
+  color: #c0392b;
+  background-color: #fff;
+  border-color: #c0392b;
+}
+
+.contact-actions button:hover {
+  background-color: #c0392b;
+  color: #fff;
 }

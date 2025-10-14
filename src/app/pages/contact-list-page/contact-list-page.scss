@@ -1,86 +1,79 @@
-/* General page layout and styling */
 .page {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: #333;
-  overflow: hidden; /* Esto es clave: oculta el contenido que se desborda */
-  display: flex; /* Hacemos el contenedor flexible */
-  flex-direction: column; /* Organiza los elementos en columna */
+  margin: 95px auto 40px auto; /* Margen superior para la nav, centrado horizontal, margen inferior */
+  width: 700px; /* Ancho responsive */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 3px 12px var(--color-dorado);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 150px);
 }
 
-/* Header section */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
+  padding: 20px;
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #0056b3;
+  font-size: 24px;
   margin: 0;
 }
 
-.primary-link {
+.link {
+  padding: 10px 15px;
+  border: 2px solid var(--color-dorado);
+  background-color: var(--color-dorado);
+  color: #ffffff;
   text-decoration: none;
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 350ms;
+
 }
 
-.primary-link:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+.link:hover {
+  background-color: #ffffff;
+  color: var(--color-dorado);
 }
 
-.primary-link:active {
-  background-color: #004085;
-  transform: translateY(0);
-}
-
-/* Contact list */
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  overflow-y: auto; /* Permite el scroll vertical si el contenido es demasiado largo */
-  padding-right: 15px; /* Agrega un espacio para que el scrollbar no se pegue a los items */
+  padding: 0 20px 20px 20px;
+  overflow-y: auto; 
 }
 
-/* Styling for when the list is empty */
 .empty {
   text-align: center;
-  font-size: 1.25rem;
-  color: #888;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px dashed #ccc;
-  line-height: 1.5;
+  padding: 30px 20px;
+  font-size: 16px;
 }
 
 .empty a {
-  color: #007bff;
+  color: var(--color-dorado);
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .empty a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin-block: 5px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
