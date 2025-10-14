@@ -57,9 +57,9 @@
 
     <div class="form-actions">
       @if(idContacto()){
-        <button [disabled]="newContactForm.invalid">Editar</button>
+        <button [disabled]="newContactForm.invalid || solicitudABackEnCurso ">Editar</button>
       } @else { 
-        <button [disabled]="newContactForm.invalid">Agregar</button>
+        <button [disabled]="newContactForm.invalid || solicitudABackEnCurso ">Agregar</button>
       }
     </div>
   </form>

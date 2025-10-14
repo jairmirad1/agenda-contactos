@@ -63,7 +63,6 @@
     font-size: 13px;
     line-height: 1.4;
     text-align: left;
-    left: 0;
     width: 100%;
 }
 
@@ -107,7 +106,8 @@
 }
 
 .form-actions button:disabled {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-text-dark);
     border-color: var(--color-light-gray);
-    color: var(--color-light-gray);
+    color: var(--color-text-light);
+    cursor: not-allowed;
 }
