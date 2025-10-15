@@ -31,7 +31,6 @@ export class ContactDetailsPage implements OnInit {
 
   async toggleFavorite() {
     if (this.contacto) {
-      try {
 
         await this.contactService.setFavourite(this.contacto.id);
         this.contacto.isFavorite = !this.contacto.isFavorite;
@@ -40,13 +39,6 @@ export class ContactDetailsPage implements OnInit {
           icon: 'success',
           title: this.contacto.isFavorite ? '¡Agregado a favoritos!' : 'Eliminado de favoritos'
         });
-      } catch (error) {
-        console.error('Error al cambiar el estado de favorito:', error);
-        Toast.fire({
-          icon: 'error',
-          title: 'No se pudo completar la acción'
-        });
-      }
     }
   }
 
