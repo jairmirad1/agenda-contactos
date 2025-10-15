@@ -2,6 +2,7 @@
     <div class="contact-details">
         <span class="numcont">Contacto Nº {{index() +1}}</span>
         <span class="name">{{contacto().firstName}}</span>
+        <span class="name">{{contacto().lastName}}</span>
         @if(contacto().isFavorite){
             <span class="favorite-icon">⭐</span>
         }
