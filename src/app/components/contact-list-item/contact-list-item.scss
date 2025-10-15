@@ -23,7 +23,7 @@
 
 .contact-details .numcont {
   font-size: 14px;
-  color: #888;
+  color: var(--color-text-light);
 }
 
 .contact-details .name {
@@ -66,12 +66,12 @@
 }
 
 .contact-actions button {
-  color: #c0392b;
+  color: var(--color-danger);
   background-color: #fff;
-  border-color: #c0392b;
+  border-color: var(--color-danger);
 }
 
 .contact-actions button:hover {
-  background-color: #c0392b;
+  background-color: var(--color-danger);
   color: #fff;
 }

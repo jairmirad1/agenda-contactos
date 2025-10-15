@@ -18,13 +18,13 @@ export class ContactListItem {
 
   showDeleteContact() {
     Swal.fire({
-      title: "¿Estas seguro?",
-      text: "Eliminar un contacto no se puede revertir",
+      title: "¿Estás seguro?",
+      text: "Esta acción no se puede revertir.",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Borrar",
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "var(--color-dorado)",
+      confirmButtonText: "Sí, ¡eliminar!",
       cancelButtonText: "Cancelar"
     }).then((result) => {
       if (result.isConfirmed) {

@@ -54,7 +54,6 @@ export class ContactsService {
         body: JSON.stringify(contact)
       });
     if(!res.ok) return;
-    /** Actualizo la lista de leads locales para dejar el lead que actualice actualizado */
     this.contacts = this.contacts.map(oldContact =>{
       if(oldContact.id === contact.id) return contact;
       return oldContact
@@ -92,24 +91,18 @@ export class ContactsService {
       }
       return null;
   }
-  /** Marca/desmarca un contacto como favorito */
-  async setFavourite(id:string | number ) {
-    const res = await fetch(this.URL_BASE+"/"+id+"/favorite", 
-      {
-        method: "POST",
-        headers: {
-          Authorization: "Bearer "+this.authService.token,
-        },
-      });
-    if(!res.ok) return;
-    const updatedContact = await res.json();//crea la constante updatedContact que contiene el contacto actualizado
-    /** Edita la lista actual de contactos reemplazando sólamente el favorito del que editamos */
-    this.contacts = this.contacts.map(contact => {
-      if(contact.id === id) {
-        return updatedContact; // Use the updated object from the server
-      };//editado
-      return contact;
-    });
-    return true;
+
+/** Marca/desmarca un contacto como favorito */
+async setFavourite(id: string | number) {
+  const res = await fetch(this.URL_BASE + "/" + id + "/favorite", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer " + this.authService.token,
+    },
+  });
+  if (!res.ok) {
+    throw new Error('Error al marcar como favorito: ' + res.status);
   }
+  return true;
+}
 }

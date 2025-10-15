@@ -18,7 +18,7 @@ export class LoggedLayout {
   cancelButtonText:"Cancelar",
   showCancelButton: true,
   confirmButtonColor: "#df2828ff",
-  cancelButtonColor: "rgba(58, 180, 76, 1)",
+  cancelButtonColor: "var(--color-dorado)",
   confirmButtonText: "Cerrar sesión"
 }).then((result) => {
   if (result.isConfirmed) {

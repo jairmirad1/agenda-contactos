@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-// Asegúrate de importar Router y RouterLink
 import { Router, RouterLink } from '@angular/router';
 import { FormUser } from '../../interfaces/user';
 import { UsersService } from '../../services/users-service';
@@ -16,7 +15,6 @@ export class RegisterPage {
   errorRegister = false;
 
   userService = inject(UsersService);
-  // 1. Inyectas el servicio Router
   router = inject(Router);
 
   async register(form: FormUser) {
@@ -45,7 +43,6 @@ export class RegisterPage {
     if (!ok) {
       this.errorRegister = true;
     } else {
-      // 2. Si el registro es exitoso, navegas a otra página
       this.router.navigate(['/login']);
     }
   }
