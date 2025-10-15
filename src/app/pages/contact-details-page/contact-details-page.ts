@@ -60,7 +60,6 @@ export class ContactDetailsPage implements OnInit {
     });
 
     if (result.isConfirmed) {
-      try {
         await this.contactService.deleteContact(this.contacto.id);
 
         Toast.fire({
@@ -70,14 +69,6 @@ export class ContactDetailsPage implements OnInit {
 
         this.router.navigate(['/']);
 
-      } catch (error) {
-        console.error("Error al eliminar el contacto:", error);
-        Swal.fire({
-          title: "Error",
-          text: "No se pudo eliminar el contacto.",
-          icon: "error"
-        });
-      }
+      } 
     }
   }
-}

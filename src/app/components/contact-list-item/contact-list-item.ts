@@ -3,6 +3,7 @@ import { Contact } from '../../interfaces/contacto';
 import { ContactsService } from '../../services/contacts-service';
 import { RouterModule } from '@angular/router';
 import Swal from 'sweetalert2';
+import { Toast } from '../../utils/modals';
 
 @Component({
   selector: 'app-contact-list-item',
@@ -29,7 +30,7 @@ export class ContactListItem {
     }).then((result) => {
       if (result.isConfirmed) {
         this.contactsService.deleteContact(this.contacto().id)
-        Swal.fire({
+        Toast.fire({
           title: "Usuario Borrado",
           icon: "success"
         });
