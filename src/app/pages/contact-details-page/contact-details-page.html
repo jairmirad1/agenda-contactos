@@ -7,6 +7,10 @@
         }
         @else
         {
+        <div class="foto">
+        @if (contacto.image) {
+            <img src="{{contacto.image}}" alt="">}
+        </div>
         <h1>{{contacto!.firstName}} {{contacto!.lastName}}</h1>
         <p>Email: <span>{{contacto.email}}</span></p>
         <p>Teléfono: <span>{{contacto.number}}</span></p>

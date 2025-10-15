@@ -1,6 +1,13 @@
 <div class="contact-item">
     <div class="contact-details">
         <span class="numcont">Contacto Nº {{index() +1}}</span>
+        <div class="foto">
+        @if (contacto().image) {
+            <img src="{{contacto().image}}" alt="">}
+            @else {
+                <span class="name">{{contacto().firstName.charAt(0)}}</span>
+            }
+        </div>
         <span class="name">{{contacto().firstName}}</span>
         <span class="name">{{contacto().lastName}}</span>
         @if(contacto().isFavorite){

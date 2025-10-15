@@ -26,7 +26,7 @@
     line-height: 1.5;
 }
 
-span{
+span {
     color: var(--color-text-dark);
 }
 
@@ -48,8 +48,8 @@ span{
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    border: 2px solid ;
-    transition:0.3s;
+    border: 2px solid;
+    transition: 0.3s;
     flex-grow: 1;
     max-width: 220px;
     text-align: center;
@@ -57,14 +57,14 @@ span{
 
 .btn-edit,
 .btn-desf,
-.btn-fav{
+.btn-fav {
     background-color: var(--color-dorado);
     color: #ffffff;
 }
 
 .btn-edit:hover,
 .btn-desf:hover,
-.btn-fav:hover{
+.btn-fav:hover {
     background-color: #fff;
     color: var(--color-dorado);
     transform: translateY(-2px);
@@ -84,3 +84,13 @@ span{
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 10px solid var(--color-light-gray);
+
+}
+
